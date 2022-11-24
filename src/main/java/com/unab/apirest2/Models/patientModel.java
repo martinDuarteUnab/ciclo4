@@ -18,11 +18,12 @@ import lombok.Setter;
 public class patientModel {
     
     @Id
+    private String id;
     private String nombre;
     private String apellido;
     private List<String> alergias;  //ejemplo:["acetaminofen","ibuprofeno"]
     private Object direccion;       //ejemplo : direccion:{ciudad; "Buacramanga", departamento:"Santander}
-        
+    private Integer identificacion;
     
 }
 
