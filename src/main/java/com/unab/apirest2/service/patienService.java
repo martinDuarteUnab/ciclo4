@@ -60,5 +60,7 @@ public class patienService {
             return "No Eliminado";
         }
     }
-    
+    public List<patientModel> pacientesByCiudad(String ciudad){
+        return pacienteRepositorio.buscarPorCiudad(ciudad);
+    }
 }

@@ -52,4 +52,9 @@ public class patienController {
         return pacienteServicio.eliminarPacienteConId(id);
 
     }
+
+    @GetMapping("/ciudad/{ciudad}")
+    public List<patientModel> listPacientesCiudad(@PathVariable("ciudad") String ciudad){
+        return pacienteServicio.pacientesByCiudad(ciudad);
+    }
 }
