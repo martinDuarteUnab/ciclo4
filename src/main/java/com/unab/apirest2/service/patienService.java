@@ -1,5 +1,6 @@
 package com.unab.apirest2.service;
 
+import java.time.LocalDate;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
@@ -62,5 +63,9 @@ public class patienService {
     }
     public List<patientModel> pacientesByCiudad(String ciudad){
         return pacienteRepositorio.buscarPorCiudad(ciudad);
+    }
+
+    public List<patientModel>pacienteMenorFecha(LocalDate fecha){
+        return pacienteRepositorio.pcientesMenoresPorFecha(fecha);
     }
 }

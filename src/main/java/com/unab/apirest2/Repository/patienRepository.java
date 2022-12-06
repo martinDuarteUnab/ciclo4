@@ -1,5 +1,6 @@
 package com.unab.apirest2.Repository;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
@@ -15,5 +16,10 @@ public interface patienRepository extends MongoRepository<patientModel, String>{
 
     @Query("{'direccion.ciudad':?0}")
     List<patientModel> buscarPorCiudad(String ciudad);
+    
+    @Query("{fechanac:{$lt:?0}}")
+    List<patientModel>pcientesMenoresPorFecha(LocalDate fecha);
+
+    List<patientModel> findByFechanac(LocalDate fechanac);
 }
    

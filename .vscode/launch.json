@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-ApiRest2Application<api-rest2>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.unab.apirest2.ApiRest2Application",
+            "projectName": "api-rest2",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

@@ -1,5 +1,6 @@
 package com.unab.apirest2.Controllers;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -27,34 +28,42 @@ public class patienController {
     patienService pacienteServicio;
 
     @GetMapping()
-    public List<patientModel>getAllPacietesOrden(){
+    public List<patientModel> getAllPacietesOrden() {
         return pacienteServicio.getListPacientesOrden();
     }
 
     @GetMapping("/{id}")
-    public Optional<patientModel> findPacienteById(@PathVariable("id") String id){
+    public Optional<patientModel> findPacienteById(@PathVariable("id") String id) {
         return pacienteServicio.getPacienteBy(id);
     }
 
     @GetMapping("/query")
-    public List<patientModel>getPacientesPorApellido(@RequestParam("apellido")String apellido){
+    public List<patientModel> getPacientesPorApellido(@RequestParam("apellido") String apellido) {
         return pacienteServicio.getPacientesByApellido(apellido);
     }
-    
+
+    @GetMapping("/ciudad/{ciudad}")
+    public List<patientModel> listPacientesCiudad(@PathVariable("ciudad") String ciudad) {
+        return pacienteServicio.pacientesByCiudad(ciudad);
+    }
+
+    @GetMapping("/fecha/query")
+    public List<patientModel> getPacienteByFechaMenor(@RequestParam("fecha") String fecha){
+        LocalDate localDate = LocalDate.parse(fecha);
+        return pacienteServicio.pacienteMenorFecha(localDate);
+    }
+
+
     @PostMapping()
-    public String savePaciente(@RequestBody patientModel paciente){
+    public String savePaciente(@RequestBody patientModel paciente) {
         return pacienteServicio.guardarPaciente(paciente);
     }
 
     @DeleteMapping("/{id}")
-    public String deletePacienteById(@PathVariable("id")String id){
-        
+    public String deletePacienteById(@PathVariable("id") String id) {
+
         return pacienteServicio.eliminarPacienteConId(id);
 
     }
 
-    @GetMapping("/ciudad/{ciudad}")
-    public List<patientModel> listPacientesCiudad(@PathVariable("ciudad") String ciudad){
-        return pacienteServicio.pacientesByCiudad(ciudad);
-    }
 }

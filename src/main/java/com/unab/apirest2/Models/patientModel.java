@@ -1,5 +1,6 @@
 package com.unab.apirest2.Models;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.data.annotation.Id;
@@ -22,6 +23,7 @@ public class patientModel {
     private String nombre;
     private String apellido;
     private List<String> alergias;  //ejemplo:["acetaminofen","ibuprofeno"]
+    private LocalDate fechanac;
     private Object direccion;       //ejemplo : direccion:{ciudad; "Buacramanga", departamento:"Santander}
     private Integer identificacion;
     
