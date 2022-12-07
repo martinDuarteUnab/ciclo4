@@ -22,6 +22,8 @@ public class citationModel {
     @Id
     private String id;
     private String id_medico;
+    private String nombremedico;
+    private String epecialidad;
     private LocalDate fecha ;
     private List<Object> citas;
 }
