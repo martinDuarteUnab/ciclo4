@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 import com.unab.apirest2.Models.patientModel;
 
 @Repository
-public interface patienRepository extends MongoRepository<patientModel, String>{
+public interface patientRepository extends MongoRepository<patientModel, String>{
     
     List<patientModel>findByApellido(String apellido);
 

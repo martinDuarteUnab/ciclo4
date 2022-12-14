@@ -1,8 +1,5 @@
 package com.unab.apirest2.Models;
 
-import java.time.LocalDate;
-import java.util.List;
-
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -11,19 +8,19 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Document("agenda")
+@Document("medicos")
+
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class citationModel {
-    
-   
+public class doctorModel {
+
     @Id
     private String id;
-    private String id_medico;
-    private String nombremedico;
-    private String epecialidad;
-    private LocalDate fecha ;
-    private List<Object> citas;
+    private Integer ndocumento;
+    private String nombre;
+    private String apellido;
+    private String especialidad;
+
 }

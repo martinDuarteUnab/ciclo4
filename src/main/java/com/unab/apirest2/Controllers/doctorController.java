@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.unab.apirest2.Models.medicModel;
-import com.unab.apirest2.service.medicService;
+import com.unab.apirest2.Models.doctorModel;
+import com.unab.apirest2.service.doctorService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -16,18 +16,18 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 @RestController
 @RequestMapping("/medicos")
-public class medicController {
+public class doctorController {
     @Autowired
-    medicService medicoServicio;
+    doctorService medicoServicio;
     
     @GetMapping()
-    public List<medicModel> listaMedicos() {
+    public List<doctorModel> listaMedicos() {
         return medicoServicio.getAllMedicos();
 
     }
     @PostMapping()
-    public medicModel postMedicos(@RequestBody medicModel medico) {
-        //TODO: process POST request
+    public doctorModel postMedicos(@RequestBody doctorModel medico) {
+  
         
         return medicoServicio.saveMedico(medico);
     }

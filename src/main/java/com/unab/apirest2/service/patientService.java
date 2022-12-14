@@ -9,13 +9,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.unab.apirest2.Models.patientModel;
-import com.unab.apirest2.Repository.patienRepository;
+import com.unab.apirest2.Repository.patientRepository;
 
 @Service
-public class patienService {
+public class patientService {
     
     @Autowired
-    patienRepository pacienteRepositorio;
+    patientRepository pacienteRepositorio;
 
     public String guardarPaciente(patientModel paciente){
 

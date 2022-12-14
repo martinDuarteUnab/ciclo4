@@ -15,17 +15,17 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.unab.apirest2.Models.patientModel;
-import com.unab.apirest2.Repository.patienRepository;
-import com.unab.apirest2.service.patienService;
+import com.unab.apirest2.Repository.patientRepository;
+import com.unab.apirest2.service.patientService;
 
 @RestController
 @RequestMapping("/paciente")
-public class patienController {
+public class patientController {
 
     @Autowired
-    patienRepository pacienteRepositorio;
+    patientRepository pacienteRepositorio;
     @Autowired
-    patienService pacienteServicio;
+    patientService pacienteServicio;
 
     @GetMapping()
     public List<patientModel> getAllPacietesOrden() {
