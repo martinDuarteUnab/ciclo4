@@ -23,7 +23,7 @@ public class medicalAppointmentModel {
     private String id;
     private String id_medico;
     private String nombremedico;
-    private String epecialidad;
-    private LocalDate fecha ;
-    private List<Object> citas;
+    private String especialidad;
+    private LocalDate fecha;
+    private List<citationModel> citas;
 }

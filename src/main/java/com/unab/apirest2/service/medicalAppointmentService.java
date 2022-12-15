@@ -27,10 +27,21 @@ public class medicalAppointmentService {
         Optional<medicalAppointmentModel> cita = citasRepositorio.findById(id);
         Optional <doctorModel> medico = medicoRepositorio.findById(cita.get().getId_medico());
         cita.get().setNombremedico(medico.get().getNombre());
-        cita.get().setEpecialidad(medico.get().getEspecialidad());
+        cita.get().setEspecialidad(medico.get().getEspecialidad());
         
         return cita;
     }
+    public medicalAppointmentModel saveAgenda(medicalAppointmentModel agenda){
+        return citasRepositorio.save(agenda);
+    }
 
+    public String eliminarAgendaPorId(String id) {
+        if (citasRepositorio.existsById(id)) {
+            citasRepositorio.deleteById(id);
+            return "Agenda Eliminada";
+        } else {
+            return "Documento No Eliminado";
+        }
+    }
     
 }
