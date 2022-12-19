@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.unab.apirest2.Models.doctorModel;
@@ -31,5 +32,10 @@ public class doctorController {
         
         return medicoServicio.saveMedico(medico);
     }
+
+    @GetMapping("/query")
+    public List<doctorModel> getDoctorPorEspecialidad(@RequestParam("especialidad") String especialidad) {
+        return medicoServicio.getMedicosByEspecialidad(especialidad);
+    } 
     
 }

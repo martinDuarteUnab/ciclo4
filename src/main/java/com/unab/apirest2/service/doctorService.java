@@ -23,4 +23,8 @@ public class doctorService {
     public doctorModel saveMedico(doctorModel medico){
         return medicoRepositorio.save(medico);
     }
+
+    public List<doctorModel>getMedicosByEspecialidad(String especialidad){
+        return medicoRepositorio.findByEspecialidad(especialidad);
+    }
 }
