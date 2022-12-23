@@ -68,4 +68,12 @@ public class patientService {
     public List<patientModel>pacienteMenorFecha(LocalDate fecha){
         return pacienteRepositorio.pcientesMenoresPorFecha(fecha);
     }
+
+    public boolean existPacienteByID(Integer identificacion){
+        return pacienteRepositorio.existsByIdentificacion(identificacion);
+    }
+
+    public  Optional<patientModel> pacientePorIdentificacion(Integer identificacion){
+        return pacienteRepositorio.findByIdentificacion(identificacion);
+    }
 }
