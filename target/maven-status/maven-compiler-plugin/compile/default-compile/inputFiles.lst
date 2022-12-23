@@ -1,0 +1,15 @@
+/Users/martinduarteflorez/Desktop/martin/programacion/ciclo4/api-rest2/src/main/java/com/unab/apirest2/Models/doctorModel.java
+/Users/martinduarteflorez/Desktop/martin/programacion/ciclo4/api-rest2/src/main/java/com/unab/apirest2/Controllers/doctorController.java
+/Users/martinduarteflorez/Desktop/martin/programacion/ciclo4/api-rest2/src/main/java/com/unab/apirest2/Models/patientModel.java
+/Users/martinduarteflorez/Desktop/martin/programacion/ciclo4/api-rest2/src/main/java/com/unab/apirest2/Models/medicalAppointmentModel.java
+/Users/martinduarteflorez/Desktop/martin/programacion/ciclo4/api-rest2/src/main/java/com/unab/apirest2/service/doctorService.java
+/Users/martinduarteflorez/Desktop/martin/programacion/ciclo4/api-rest2/src/main/java/com/unab/apirest2/Controllers/medicalAppointmentController.java
+/Users/martinduarteflorez/Desktop/martin/programacion/ciclo4/api-rest2/src/main/java/com/unab/apirest2/Repository/medicalAppointmentRepository.java
+/Users/martinduarteflorez/Desktop/martin/programacion/ciclo4/api-rest2/src/main/java/com/unab/apirest2/Repository/doctorRepository.java
+/Users/martinduarteflorez/Desktop/martin/programacion/ciclo4/api-rest2/src/main/java/com/unab/apirest2/ServletInitializer.java
+/Users/martinduarteflorez/Desktop/martin/programacion/ciclo4/api-rest2/src/main/java/com/unab/apirest2/service/patientService.java
+/Users/martinduarteflorez/Desktop/martin/programacion/ciclo4/api-rest2/src/main/java/com/unab/apirest2/Repository/patientRepository.java
+/Users/martinduarteflorez/Desktop/martin/programacion/ciclo4/api-rest2/src/main/java/com/unab/apirest2/Models/citationModel.java
+/Users/martinduarteflorez/Desktop/martin/programacion/ciclo4/api-rest2/src/main/java/com/unab/apirest2/Controllers/patientController.java
+/Users/martinduarteflorez/Desktop/martin/programacion/ciclo4/api-rest2/src/main/java/com/unab/apirest2/ApiRest2Application.java
+/Users/martinduarteflorez/Desktop/martin/programacion/ciclo4/api-rest2/src/main/java/com/unab/apirest2/service/medicalAppointmentService.java
