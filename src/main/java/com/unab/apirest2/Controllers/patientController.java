@@ -70,8 +70,14 @@ public class patientController {
 
     }
 
-    @GetMapping("/identificacion/{ndocumento}")
-    public  Optional<patientModel> findPacienteByNdocumento(@PathVariable("ndocumento") Integer ndocumento){
+    @GetMapping("/existe/query")
+    public Boolean existePacienteById(@RequestParam("identificacion") Integer ndocumento){
+        return pacienteServicio.existPacienteByID(ndocumento);
+    }
+
+
+    @GetMapping("/identificacion/{identificacion}")
+    public  Optional<patientModel> findPacienteByNdocumento(@PathVariable("identificacion") Integer ndocumento){
         return pacienteServicio.pacientePorIdentificacion(ndocumento);
     }
 
